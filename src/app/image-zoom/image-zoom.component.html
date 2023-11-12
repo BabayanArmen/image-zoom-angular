@@ -1,0 +1,8 @@
+<div class="image-zoom-wrapper" [ngStyle]="{'width' : initialWidth + 'px', 'height' : wrapperHeight + 'px'}" (mousedown)="onMousedown($event)" (mousemove)="onMouseMove($event)" (mouseup)="onMouseUp()" (wheel)="onWheel($event)">
+    <img #resizableImage class="imagezoom" [src]="imgUrl" alt="Image">
+    <div class="control-buttons">
+        <button (click)="rotate()">Rotate</button>
+        <button (click)="zoomIn()">Zoom In</button>
+        <button (click)="zoomOut()">Zoom Out</button>
+    </div>
+</div>
